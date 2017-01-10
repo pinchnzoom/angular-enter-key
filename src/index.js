@@ -11,7 +11,7 @@ angular.module('pz.enterKey',[]).directive('pzEnterKey', function($parse) {
     link: function(scope, el, attrs) {
       var fn = $parse(attrs['pzEnterKey']);
 
-      el.on('keydown keypress', function(e){
+      el.on('keydown keypress', function(){
         var grabattrs = attrs.pzEnterKey;
         var cond = grabattrs.split(',');
         cond = cond[cond.length-1];
